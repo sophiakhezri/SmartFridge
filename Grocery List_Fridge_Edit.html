@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+
+.background {
+  background-color: rgb(209, 209, 209);
+  height: 500px;
+  width:800px;
+  padding: 10px;
+  border: 2px;
+  position: relative;
+}
+
+.text-return {
+  position: absolute;
+  bottom: 0px;
+  right: 16px;
+}
+
+.box_search {
+  border: 1px solid black;
+  display: inline-block;
+  height: 50px;
+  width: 670px;
+  align-content: center;
+}
+
+.text_searchitem{
+  font-size: 40px;
+  position: absolute;
+  left: 25px;
+}
+
+.text_searchicon{
+    font-size: 30px;
+    position: absolute;
+    right: 25px;
+    top: 135px;
+}
+
+.text_searchicon:hover {
+  background: grey; /*sets background colour*/
+}
+
+.text_items{
+  font-size: 25px;
+  position: absolute;
+  left: 25px;
+  top: 20px;
+
+}
+
+.dropdown_box {
+    border: 1px solid black;
+    display: inline-block;
+    position: absolute;
+    top: 180px;
+    height: 300px;
+    width: 670px;
+    align-content: center;
+}
+
+</style>
+</head>
+
+<div class = "background">
+    <H2>Grocery List
+        <span style = "float:right"><a href = "SmartFridgeHome.html">Home</a></span>
+    </H2>
+    <H2 align = "right">11:00AM</H2>
+    <div class = "box_search">
+        <div class = "text_searchitem">Bro</div>
+        <div class = "text_searchicon">Search</span>
+    </div>
+    <div class = "dropdown_box">
+        <p style = "font-size: 15px">Do you mean..?</p>
+        <div class = "text_items">
+            <p>Broccoli</p>
+            <p>BroadBeans</p>
+            <p>Bread</p>
+            <p>Brussels</p>
+        </div>
+    </div>
+    <div class = "text-return">
+       <a href = "Grocery List_Fridge.html"><h2>Return</h2></a>
+    </div>
+
+</div>
+</html>
