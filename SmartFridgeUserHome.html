@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: 200px 200px 400px;
+  grid-template-rows:300px 300px 300px;
+  grid-column-gap:50px;
+  grid-gap: 80px;
+  padding: 50px;
+  align-items:center;
+}
+
+.grid-container > div {
+  background-color:white;
+  text-align: center;
+  font-size: 13px;
+  height: 100px;
+  width: 100px;
+  font-size:20px;
+}
+
+.cityText {
+  position: absolute;
+  top: 20px;
+  right: 525px;
+  font-size: 20px;
+}
+.weatherText {
+  position: absolute;
+  top: 40px;
+  right: 525px;
+  font-size: 18px;
+}
+</style>
+</head>
+
+<div id = "background"
+     style="background-color: rgb(209, 209,209);
+     height: 500px;
+     width:800px;
+     padding: 10px;
+     border: 2px;">
+    <div class="cityText">College Park, Maryland</div>
+    <div class="weatherText">75 Degrees</div>
+    <div class="grid-container">
+    <div>Sarah</div>
+    <div>Josh</div>
+    <div>Linda</div>
+  </div>
+</div>
+
+</html>
