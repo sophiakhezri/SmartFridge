@@ -1,9 +1,17 @@
 .grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-column-gap:50px;
-  grid-gap: 60px;
-  padding: 30px;
+  padding: 5px;
+  margin: 44px;
+  grid-row-gap: 26px;
+  grid-column-gap: 11px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.grid-container > button {
+  background-color: white;
+  height: 140px;
+  width: 140px;
 }
 
 .timeText {
@@ -19,7 +27,15 @@ H3 {
 }
 
 
-H1 {
+H1.welcome {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  color: white;
+  font-size: 45px;
+  text-align: center;
+}
+
+
+H1.feature {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   color: white;
   font-size: 45px;
@@ -37,10 +53,6 @@ a {
 }
 
 a:visited { text-decoration: none; color:black }
-
-.boxed {
-  border: 1px solid green ;
-}
 
 
 .time {
@@ -71,8 +83,22 @@ a:visited { text-decoration: none; color:black }
   transition-duration: 0.4s;
 }
 
+.optionsButton {
+  background-color: white;
+  border-radius: 8px;
+  border: none;
+  text-align: flex;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 0px 4px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
 .addButton {
-  background-color: white; /* Green */
+  background-color: white;
   border-radius: 8px;
   border: none;
   padding: 10px 16px;
@@ -88,4 +114,6 @@ a:visited { text-decoration: none; color:black }
 
 .button2:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: #d3d3d3;
+  opacity: 0.65;
 }
