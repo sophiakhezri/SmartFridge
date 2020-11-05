@@ -1,0 +1,91 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-column-gap:50px;
+  grid-gap: 60px;
+  padding: 30px;
+}
+
+.timeText {
+  position: absolute;
+  top: 20px;
+  right: 525px;
+  font-size: 20px;
+}
+
+H3 {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  color: white
+}
+
+
+H1 {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  color: white;
+  font-size: 45px;
+}
+
+
+p {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  color: white
+}
+
+
+a {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+a:visited { text-decoration: none; color:black }
+
+.boxed {
+  border: 1px solid green ;
+}
+
+
+.time {
+  background-color: grey; /* Green */
+  opacity: 0.65;
+  border-radius: 8px;
+  border: none;
+  padding: 15px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0px 8px;
+}
+
+.homeButton {
+  background-color: white; /* Green */
+  border-radius: 8px;
+  border: none;
+  padding: 15px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0px 4px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.addButton {
+  background-color: white; /* Green */
+  border-radius: 8px;
+  border: none;
+  padding: 10px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
