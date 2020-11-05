@@ -20,35 +20,115 @@
   font-size: 20px;
 }
 
+H3 {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  color: white
+}
+
+
+H1 {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  color: white;
+  font-size: 45px;
+}
+
+
+p {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  color: white
+}
+
+
+a {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+a:visited { text-decoration: none; color:black }
+
+.boxed {
+  border: 1px solid green ;
+}
+
+
+.time {
+  background-color: grey; /* Green */
+  opacity: 0.65;
+  border-radius: 8px;
+  border: none;
+  padding: 15px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0px 8px;
+}
+
+.homeButton {
+  background-color: white; /* Green */
+  border-radius: 8px;
+  border: none;
+  padding: 15px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0px 4px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.addButton {
+  background-color: white; /* Green */
+  border-radius: 8px;
+  border: none;
+  padding: 10px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
 </style>
 </head>
 
 <div id = "background"
-     style="background-color: rgb(209, 209,209);
+     style="background-color: #282F44;
      height: 500px;
      width:800px;
-     padding: 10px;
-     border: 2px;">
-     <H2>Sarah's Reminders
-      <span style = "float:right"><a href = "SmartFridgeHome.html">Home</a></span>
-    </H2>
-    <H2 align = "right">11:00AM</H2>
+     padding: 20px;
+     border: 6px;">
 
-     <p align="center">
+     <H1> Sarah's Reminders
+       <button style= "float:right" class="homeButton button2"><a style="text-decoration:none; font-weight:bold; color: #282F44" href = "SmartFridgeHome.html"><i class="fas fa-home"></i>   Home</a></button>
+       <div style= "float:right" class="time">11:32 am</div>
+     </H1>
+
+
+     <p align="left">
        <i class="fas fa-exclamation-circle"></i>
        Ground beef expires in 3 days
      </p>
-     <p align="center">
+     <p align="left">
        <i class="fas fa-exclamation-circle"></i>
        Interview tomorrow at 10:00am
      </p>
-     <p align="center">
+     <p align="left">
        <i class="fas fa-exclamation-circle"></i>
        Homework #4 due today at 5:00pm
      </p>
 
      <div align="center">
-       <button type="button">Click here to add a reminder</button>
+       <button style= "float:left" class="addButton button2"><a style="text-decoration:none; font-weight:bold; color: #282F44" href = "SmartFridgeHome.html"><i class="fas fa-plus"></i>   Add Reminder</a></button>
      </div>
 
 
