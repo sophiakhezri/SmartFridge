@@ -1,44 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<style>
-.background {
-  background-color: rgb(209, 209, 209);
-  height: 500px;
-  width:800px;
-  padding: 10px;
-  border: 2px;
-  position: relative;
-}
 
-.text-return {
-  position: absolute;
-  bottom: 0px;
-  right: 16px;
-}
+<script src="https://kit.fontawesome.com/67ffb6f852.js" crossorigin="anonymous"></script>
 
-.text-center {
-  position: relative;
-  text-align: center;
-  color: green;
-}
-
-</style>
+<link rel="stylesheet" href="stylesheet.css">
 </head>
 
-<div class = "background">
-    <H2>Notepad</H2>
-    <H2 align = "right">11:00AM</H2>
-     <div class="text-center">
-      <p>example note here</p>
-      <p>more notes written</p>
-      <p>even more notes</p>
-      <!-- <button type="button">Click here to add a note</button> -->
-      <a class="btn btn-primary" href="Notepad_New_Page.html">Click here to add a note</a>
+<div id = "background"
+     style="background-color: #282F44;
+     height: 500px;
+     width:800px;
+     padding: 20px;
+     border: 6px;">
+
+     <H1 class="feature"> Notepad
+       <button style= "float:right" class="homeButton button2"><a style="text-decoration:none; font-weight:bold; color: #282F44" href = "index.html"><i class="fas fa-home"></i>   Home</a></button>
+       <div style= "float:right" class="time">11:32 am</div>
+     </H1>
+
+
+     <p align="left">
+       Hey mom! - Johnny
+     </p>
+     <p align="left">
+       Hope everyone has a great day!
+     </p>
+     <p align="left">
+       Game night tonight :)
+     </p>
+
+     <div align="center">
+       <button style= "float:left" class="addButton button2"><a style="text-decoration:none; font-weight:bold; color: #282F44" href = "Notepad_New_Page.html"><i class="fas fa-plus"></i>   Add Note</a></button>
      </div>
-     <div class = "text-return">
-      <a href = "SmartFridgeHome.html"><h2>Return</h2></a>
-   </div>
+
+
+
 </div>
+
 </html>
