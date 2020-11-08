@@ -1,50 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<style>
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-column-gap:50px;
-  grid-gap: 90px;
-  padding: 80px;
-}
-
-.grid-container > div {
-  background-color:white;
-  text-align: center;
-  font-size: 13px;
-  height: 100px;
-  width: 100px;
-}
-.weatherText {
-  position: absolute;
-  top: 40px;
-  right: 525px;
-  font-size: 18px;
-}
-ul, li{
-margin:0;
-padding:0 0 0 45px;
-}
-
-.column{
-    float: left;
-    margin: 0 10px 0 0;
-    padding-left: 55px;
-}
-</style>
+  <script src="https://kit.fontawesome.com/67ffb6f852.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="stylesheet.css">
 </head>
 
 <div id = "background"
-     style="background-color: rgb(209, 209,209);
+     style="background-color: #282F44;
      height: 500px;
      width:800px;
-     padding: 10px;
-     border: 2px;">
+     padding: 20px;
+     border: 6px;">
 
-     <H2 align = "right">3:15 PM</H2>
-     <H2 align = "center">Food Categorization</H2>
+
+     <H1 class="feature"> Food Categorization
+       <button style= "float:right" class="homeButton button2"><a style="text-decoration:none; font-weight:bold; color: #282F44" href = "index.html"><i class="fas fa-home"></i>   Home</a></button>
+       <div style= "float:right" class="time">11:32 am</div>
+     </H1>
 
 
      <div class="column">
@@ -56,7 +28,8 @@ padding:0 0 0 45px;
         <li>Ezekiel Bread</li>
         <li>Chipotle</li>
     </ul>
-</div>
+    <button class="addButton button2"><a style="text-decoration:none; font-weight:bold; color: #282F44" href = "index.html"><i class="fas fa-plus"></i></a></button>
+  </div>
 
 <div class="column">
     <h3>Joseph</h3>
@@ -67,6 +40,8 @@ padding:0 0 0 45px;
         <li>English Muffins</li>
         <li>Organic Eggs</li>
     </ul>
+    <button class="addButton button2"><a style="text-decoration:none; font-weight:bold; color: #282F44" href = "index.html"><i class="fas fa-plus"></i></a></button>
+
 </div>
 
 <div class="column">
@@ -77,14 +52,9 @@ padding:0 0 0 45px;
         <li>Carrots</li>
         <li>Hummus</li>
     </ul>
+    <button class="addButton button2"><a style="text-decoration:none; font-weight:bold; color: #282F44" href = "index.html"><i class="fas fa-plus"></i></a></button>
 </div>
 
-
-<hr />
-
-
-     </p>
-   </div>
 </div>
 
 </html>

@@ -1,81 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<style>
 
-.background {
-  background-color: rgb(209, 209, 209);
-  height: 500px;
-  width:800px;
-  padding: 10px;
-  border: 2px;
-  position: relative;
-}
+<link rel="stylesheet" href="stylesheet.css">
 
-.text-return {
-  position: absolute;
-  bottom: 0px;
-  right: 16px;
-}
-
-.box_plus {
-  position: absolute;
-  bottom: 16px;
-  left: 16px;
-  border: 1px solid black;
-  transition: all 0.6s;
-  display: inline-block;
-  height: 50px;
-  width: 50px;
-  align-content: center;
-}
-
-.box_minus {
-  position: absolute;
-  bottom: 16px;
-  left: 80px;
-  border: 1px solid black;
-  transition: all 0.6s;
-  display: inline-block;
-  height: 50px;
-  width: 50px;
-  align-content: center;
-}
-
-.text_plus{
-  font-size: 70px;
-  position: absolute;
-  bottom: -12px;
-  left: 5px;
-}
-
-.text_minus{
-  font-size: 70px;
-  position: absolute;
-  bottom: -12px;
-  left: 13px;
-}
-
-.box_plus:hover {
-  background: grey; /*sets background colour*/
-}
-
-.box_minus:hover {
-  background: grey; /*sets background colour*/
-}
-
-.text_items{
-  font-size: 20px;
-  line-height: 2;
-}
-</style>
 </head>
 
-<div class = "background">
-    <H2>Grocery List
-      <span style = "float:right"><a href = "SmartFridgeHome.html">Home</a></span>
-    </H2>
-    <H2 align = "right">11:00AM</H2>
+<div id = "background"
+     style="background-color: #282F44;
+     height: 500px;
+     width:800px;
+     padding: 20px;
+     border: 6px;">
+
+     <H1 class="feature"> Grocery List
+       <button style= "float:right" class="homeButton button2"><a style="text-decoration:none; font-weight:bold; color: #282F44" href = "index.html"><i class="fas fa-home"></i>   Home</a></button>
+       <div style= "float:right" class="time">11:32 am</div>
+     </H1>
+
+
     <ul class = "text_items">
       <li>Banana 1 lb
         <span style = "float:right">Expires on October 31th</span>
@@ -91,17 +34,15 @@
       </li>
     </ul>
 
-    <div class = "box_plus">
-      <div class = "text_plus"><a href = "Grocery List_Fridge_Edit.html" 
+    <div class = "box_plus button2">
+      <div class = "text_plus"><a href = "Grocery List_Fridge_Edit.html"
         style = "text-decoration: inherit; color: inherit"><b>+</b></a></div>
     </div>
-    <div class = "box_minus">
-      <div class = "text_minus"><a href = "Grocery List_Fridge_Edit.html" 
+    <div class = "box_minus button2">
+      <div class = "text_minus"><a href = "Grocery List_Fridge_Edit.html"
         style = "text-decoration: inherit; color: inherit"><b>-</b></a></div>
     </div>
-    <div class = "text-return">
-       <a href = "SmartFridgeHome.html"><h2>Return</h2></a>
-    </div>
+
 
 </div>
 </html>

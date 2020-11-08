@@ -21,6 +21,21 @@
   font-size: 20px;
 }
 
+ul, li{
+margin:0;
+padding:0 0 0 45px;
+color: white;
+font-family: "Trebuchet MS", Helvetica, sans-serif;
+
+
+}
+
+.column{
+    float: left;
+    margin: 0 60px 0 0;
+    padding-left: 10px;
+}
+
 H3 {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   color: white
@@ -106,14 +121,63 @@ a:visited { text-decoration: none; color:black }
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  margin: 10px 2px;
   cursor: pointer;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
 }
 
+
 .button2:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
   background-color: #d3d3d3;
   opacity: 0.65;
+}
+
+
+.box_plus {
+  position: absolute;
+  bottom: 50px;
+  left: 30px;
+  border-radius: 8px;
+  background-color: white;
+  transition: all 0.6s;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  align-content: center;
+}
+
+.box_minus {
+  position: absolute;
+  bottom: 50px;
+  left: 100px;
+  border-radius: 8px;
+  background-color: white;
+  transition: all 0.6s;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  align-content: center;
+}
+
+.text_plus{
+  font-size: 70px;
+  position: absolute;
+  bottom: -15px;
+  left: 5px;
+  color: #282F44;
+}
+
+.text_minus{
+  font-size: 70px;
+  position: absolute;
+  bottom: -10px;
+  left: 13px;
+  color: #282F44;
+}
+
+.text_items{
+  font-size: 20px;
+  line-height:2;
 }
