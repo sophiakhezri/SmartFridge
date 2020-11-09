@@ -41,6 +41,10 @@ H3 {
   color: white
 }
 
+H3.city {
+  font-size: 15px;
+  text-align: right;
+}
 
 H1.welcome {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -56,6 +60,12 @@ H1.feature {
   font-size: 45px;
 }
 
+H1.userProfile {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  color: white;
+  font-size: 28px;
+  text-align: center;
+}
 
 p {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
