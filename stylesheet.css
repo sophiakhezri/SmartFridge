@@ -181,3 +181,18 @@ a:visited { text-decoration: none; color:black }
   font-size: 20px;
   line-height:2;
 }
+
+.btn {
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  padding: 8px 4px;
+  margin: 3px;
+  font-size: 13px;
+  cursor: pointer;
+  display: block;
+  text-align: left;
+  margin-left: -45px;
+}
+
+.btn:hover {background: #eee;}
