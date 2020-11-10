@@ -41,6 +41,14 @@ H3 {
   color: white
 }
 
+H2 {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 20px;
+  border-bottom: 2px solid white;
+  border-spacing: 1px;
+  color: white
+}
+
 H3.city {
   font-size: 15px;
   text-align: right;
@@ -206,3 +214,15 @@ a:visited { text-decoration: none; color:black }
 }
 
 .btn:hover {background: #eee;}
+
+.dropdown_box{
+  position: absolute;
+  top: 170px;
+  left: 21px;
+  border-radius: 8px;
+  border: 1px solid white;
+  display: inline-block;
+  height: 200px;
+  width: 580px;
+  align-content: center;
+}
