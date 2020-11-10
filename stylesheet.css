@@ -226,3 +226,18 @@ a:visited { text-decoration: none; color:black }
   width: 580px;
   align-content: center;
 }
+
+.navButton {
+  background-color: grey;
+  border-radius: 8px;
+  border: none;
+  padding: 3px 4px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 2px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
