@@ -250,3 +250,20 @@ a:hover { color: yellow; }
 textarea::placeholder {
   color: white;
 }
+
+.grocery {
+  font-weight: bold;
+  color: yellow;
+}
+
+#newOrganizationTipEntry {
+  background-color: #282F44;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  color: white;
+  border: 1px solid;
+}
+
+#noteDeleteIcon {
+  margin-right: 20px;
+  margin-left: 20px;
+}
