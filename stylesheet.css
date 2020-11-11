@@ -255,7 +255,7 @@ textarea::placeholder {
   color: yellow;
 }
 
-#newOrganizationTipEntry {
+.organizationEntry {
   background-color: #282F44;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   color: white;

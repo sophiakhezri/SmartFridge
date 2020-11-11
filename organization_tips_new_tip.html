@@ -4,6 +4,41 @@
 	<script src="https://kit.fontawesome.com/67ffb6f852.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="stylesheet.css">
 
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+    function getTip(grocery_type) {
+      var organizationMap = JSON.parse(localStorage.getItem("organization_map"));
+      for (var i = 0; i < organizationMap.length; i++) {
+        if (organizationMap[i][0] == grocery_type) {
+          return organizationMap[i][1];
+        }
+      }
+      var result = "no tips at the moment";
+      return result;
+    }
+  </script>
+  <script type="text/javascript">
+  if(localStorage) {
+    $(document).ready(function() {
+      $("#addButton").click(function() {
+        var organizationSet = JSON.parse(localStorage.getItem("organization_set"));
+        var organizationCounter = JSON.parse(localStorage.getItem("organization_counter"));
+        var today = new Date();
+
+        var newGrocery = $("#newGrocery").val().toLowerCase();
+        var newGroceryType = $("#newGroceryType").val().toLowerCase();
+        var tip = getTip(newGroceryType);
+        organizationSet.push([newGrocery, tip])
+        organizationCounter += 1;
+        localStorage.setItem("organization_set", JSON.stringify(organizationSet));
+        localStorage.setItem("organization_counter", JSON.stringify(organizationCounter));
+        window.location.replace("Recommendation_On_Organization.html");
+      });
+    })
+  } else {
+    alert("Sorry, your browser do not support local storage.")
+  }
+  </script>
 
 </head>
 
@@ -20,11 +55,12 @@
      </H1>
 
      <div>
-        <p>New Grocery Item:  <textarea id="newOrganizationTipEntry"></textarea></p>
+        <p>New Grocery Item:  <textarea class="organizationEntry" id="newGrocery"></textarea></p>
+        <p>Types of grocery(Meat, Fruits etc.):  <textarea class="organizationEntry" id="newGroceryType"></textarea></p>
      </div>
 
 		 <div align="center">
-       <button style= "float:center" class="addButton button2"><a style="text-decoration:none; font-weight:bold; color: #282F44" href = "Recommendation_On_Organization.html"><i class="fas fa-plus"></i>   Get New Tip</a></button>
+       <button id="addButton" style= "float:center" class="addButton button2"><a style="text-decoration:none; font-weight:bold; color: #282F44"><i class="fas fa-plus"></i>   Get New Tip</a></button>
      </div>
 </div>
 
