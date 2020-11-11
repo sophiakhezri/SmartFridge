@@ -86,6 +86,10 @@ a.notepadNote {
   text-decoration: none;
 }
 
+a.text_items{
+  font-size: 20px;
+  line-height:2;
+}
 
 a {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -205,11 +209,6 @@ a:hover { color: yellow; }
   color: #282F44;
 }
 
-.text_items{
-  font-size: 20px;
-  line-height:2;
-}
-
 .btn {
   border: none;
   border-radius: 5px;
@@ -266,4 +265,25 @@ textarea::placeholder {
 #noteDeleteIcon {
   margin-right: 20px;
   margin-left: 20px;
+}
+
+#add_item_list{
+  background-color: #282F44;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  color: white;
+  font-size: 20px;
+  border: 2px solid;
+  width: 575px;
+  height: 30px;
+}
+
+.text_list {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 30px;
+  color: white
+}
+
+.text_grocery {
+  font-size: 20px;
+  line-height:2;
 }
