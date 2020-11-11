@@ -4,6 +4,62 @@
 	<script src="https://kit.fontawesome.com/67ffb6f852.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="stylesheet.css">
 
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script type="text/javascript">
+  function deleteNotes() {
+    var organizationCounter = JSON.parse(localStorage.getItem("organization_counter"));
+    organizationCounter -= 1;
+    localStorage.setItem("organizationCounter", JSON.stringify(organizationCounter));
+    location.reload();
+  }
+</script>
+
+<script type="text/javascript">
+if(localStorage) {
+  $(document).ready(function() {
+    var today = new Date();
+    document.getElementById("displayDate").innerHTML = today.toLocaleTimeString().replace(/([\d]+:[\d]{2})(:[\d]{2})(.*)/, "$1$3");
+    var organizationSet = JSON.parse(localStorage.getItem("organization_set"));
+    var organizationCounter = JSON.parse(localStorage.getItem("organizationCounter"));
+    var element = document.getElementById("organizationList");
+    for (i = 0; i < organizationCounter; i++) {
+      var buttonWrapper = document.createElement("div");
+      var rowTag = document.createElement("p");
+      var groceryTag = document.createElement("span");
+      var separator = document.createElement("hr");
+      var deleteIcon = document.createElement("i");
+      var deleteButton = document.createElement("BUTTON");
+
+      var grocery = document.createTextNode(organizationSet[i][0]);
+      var rowText = document.createTextNode(" should be in " + organizationSet[i][0] + "       ")
+      var deleteButtonText = document.createTextNode(" Delete");
+
+      deleteIcon.setAttribute("class", "far fa-trash-alt");
+      deleteButton.setAttribute("onclick", "deleteNotes()");
+
+      groceryTag.appendChild(grocery);
+      deleteButton.appendChild(deleteIcon);
+      deleteButton.appendChild(deleteButtonText);
+      groceryTag.setAttribute("class", "grocery");
+      // separator.setAttribute("width", "60%")
+      deleteButton.style = "float:right";
+      buttonWrapper.appendChild(deleteButton);
+      rowTag.appendChild(groceryTag);
+      rowTag.appendChild(rowText);
+      rowTag.appendChild(deleteButton);
+      rowTag.setAttribute("align", "center");
+
+      element.appendChild(rowTag)
+      element.appendChild(separator);
+    }
+
+  });
+} else {
+  alert("Sorry, your browser do not support local storage.")
+}
+</script>
+
 
 </head>
 
@@ -16,11 +72,12 @@
 
      <H1 class="feature"> Sarah's Organization Tips
        <button style= "float:right" class="homeButton button2"><a style="text-decoration:none; font-weight:bold; color: #282F44" href = "index.html"><i class="fas fa-home"></i>   Home</a></button>
-       <div style= "float:right" class="time">11:32 am</div>
+       <div id="displayDate" style= "float:right" class="time">11:32 am</div>
      </H1>
 
 
-     <p align="center">
+     <div id="organizationList">
+       <!-- <p align="center">
        <i class="fas fa-temperature-low"></i>
        <span class="grocery">Ground beef</span> in Frozen <i class="fas fa-trash-alt"></i>
      </p>
@@ -49,7 +106,8 @@
        <i class="fas fa-fan"></i>
        <span class="grocery">Banana</span> in cool and dry place <i class="fas fa-trash-alt"></i>
      </p>
-     <hr width="60%">
+     <hr width="60%"> -->
+     </div>
 		 <div align="center">
        <button style= "float:center" class="addButton button2"><a style="text-decoration:none; font-weight:bold; color: #282F44" href = "organization_tips_new_tip.html"><i class="fas fa-plus"></i>   Add Tip</a></button>
      </div>

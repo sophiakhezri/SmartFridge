@@ -12,11 +12,22 @@ if(localStorage) {
       var notesDate = ["01/10/2020", "08/20/2020", "09/10/2020", "10/11/2020", "11/08/2020", "", "", "", "", ""];
       var notesId = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
       var notesCounter = 5;
+
+      var organizationMap = [["ground beef", "frozen"], ["chicken breast", "frozen"], ["spinach", "mid/lower part in freezer"], ["grapes", "mid/lower part in freezer"], ["bread", "cool and dry place"], ["banana", "cool and dry place"]];
+      var organizationSet = [["ground beef", "frozen"]];
+      var organizationCounter = 1;
+
+
+
+
       localStorage.setItem("notes", JSON.stringify(notes));
       localStorage.setItem("notes_titles", JSON.stringify(notesTitles));
       localStorage.setItem("notes_date", JSON.stringify(notesDate));
       localStorage.setItem("notes_id", JSON.stringify(notesId));
       localStorage.setItem("notes_counter", JSON.stringify(notesCounter));
+      localStorage.setItem("organization_map", JSON.stringify(organizationMap));
+      localStorage.setItem("organization_set", JSON.stringify(organizationSet));
+      localStorage.setItem("organization_counter", JSON.stringify(organizationCounter));
   });
 } else {
   alert("Sorry, your browser do not support local storage.")
