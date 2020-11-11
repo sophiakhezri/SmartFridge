@@ -293,3 +293,36 @@ textarea::placeholder {
   text-decoration: none;
   color: white;
 }
+
+.notepadDate {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  text-decoration: none;
+  text-align: center;
+  padding-right: 200px;
+  color: white;
+}
+
+#newNote {
+  background-color: #282F44;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  color: white;
+  font-size: 20px;
+  border: 1px solid;
+  width: 500px;
+  height: 300px;
+}
+
+#newNoteTitle {
+  background-color: #282F44;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  color: white;
+  font-size: 20px;
+  border: 1px solid;
+  width: 500px;
+  height: 30px;
+}
+
+textarea::placeholder {
+  color: white;
+}
+
