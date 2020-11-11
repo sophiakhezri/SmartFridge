@@ -293,3 +293,25 @@ textarea::placeholder{
   width: 50px;
   align-content: center;
 }
+
+.mobileNoteDate {
+  text-decoration: none;
+  padding-left: 10px;
+  color: black;
+}
+
+#newMobileNote {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 15px;
+  border: 1px solid black;
+  width: 200px;
+  height: 150px;
+}
+
+#newMobileNoteTitle {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 15px;
+  border: 1px solid black;
+  width: 200px;
+  height: 30px;
+}

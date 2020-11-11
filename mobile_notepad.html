@@ -1,0 +1,156 @@
+<head>
+  <script src="https://kit.fontawesome.com/67ffb6f852.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="mobilestyle.css">
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script type="text/javascript">
+  function deleteNotes() {
+    var notesCounter = JSON.parse(localStorage.getItem("notes_counter"));
+    notesCounter -= 1;
+    localStorage.setItem("notes_counter", JSON.stringify(notesCounter));
+    location.reload();
+  }
+</script>
+
+<script type="text/javascript">
+  function openNotes(btn) {
+    var index = btn.id;
+    var href = "seed/sample_mobile_note_" + index + ".html";
+    console.log(href);
+    window.location.replace(href);
+  }
+</script>
+
+<script type="text/javascript">
+  function truncateText(text, maxLength) {
+      console.log(typeof text);
+      text = String(text);
+      if (text.length > maxLength) {
+        text = text.substr(0, maxLength) + '...';
+      } else {
+        text = text + '...';
+      }
+      return text;
+  }
+</script>
+
+<script type="text/javascript">
+if(localStorage) {
+  $(document).ready(function() {
+    var today = new Date();
+    var notesTitles = JSON.parse(localStorage.getItem("notes_titles"));
+    var notesDate = JSON.parse(localStorage.getItem("notes_date"));
+    var notesId = JSON.parse(localStorage.getItem("notes_id"));
+    var notesCounter = Number(localStorage.getItem("notes_counter"));
+    var element = document.getElementById("page");
+    console.log(notesDate[0]);
+    for (i = 0; i < notesCounter; i++) {
+      var titleTag = document.createElement("p");
+      var dateTag = document.createElement("div");
+      var dateTagTest = document.createElement("p");
+      var separator = document.createElement("hr");
+      var deleteIcon = document.createElement("i");
+      var openIcon = document.createElement("i");
+      var deleteButton = document.createElement("BUTTON");
+      var openButton = document.createElement("BUTTON");
+
+      var title = document.createTextNode(truncateText(notesTitles[i], 10));
+      var date = document.createTextNode(notesDate[i]);
+      var deleteButtonText = document.createTextNode(" Delete");
+      var openButtonText = document.createTextNode(" Click to open");
+
+      dateTag.appendChild(date);
+      dateTagTest.appendChild(date);
+      deleteIcon.setAttribute("class", "far fa-trash-alt");
+      openIcon.setAttribute("class", "fas fa-lock-open");
+      deleteButton.setAttribute("onclick", "deleteNotes(this)");
+      openButton.setAttribute("onclick", "openNotes(this)");
+      openButton.setAttribute("id", notesId[i]);
+      dateTag.setAttribute("class", "notepadDate");
+
+      deleteButton.appendChild(deleteIcon);
+      //deleteButton.appendChild(deleteButtonText);
+      openButton.appendChild(openIcon);
+      //openButton.appendChild(openButtonText);
+      titleTag.appendChild(title);
+      titleTag.href = "Notepad_Note_Template.html"
+      titleTag.setAttribute("class", "notepadNote");
+      deleteButton.style = "float:right";
+      openButton.style = "float:right";
+      dateTagTest.setAttribute("class", "mobileNoteDate");
+      // dateTag.style = "float:right";
+
+
+      element.appendChild(titleTag);
+      element.appendChild(deleteButton);
+      element.appendChild(openButton);
+      //element.appendChild(dateTag);
+      element.appendChild(dateTagTest);
+      element.appendChild(separator);
+    }
+
+  });
+} else {
+  alert("Sorry, your browser do not support local storage.")
+}
+</script>
+
+</head>
+
+<style>
+
+  hr.solid {
+    border-top: 3px solid #282F44;
+  }
+  p {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    color: black;
+    font-size:12px;
+    display: inline;
+  }
+
+  .button1 {width: 100%;}
+</style>
+
+<main>
+
+  <header>
+    <div class="feature"></div>
+    <div class="feature"></div>
+  </header>
+
+  <div id="app">
+
+    <header>
+       <div class="system-bar">
+        <div class="left">Verizon 4G</div>
+        <div class="centre">12:34</div>
+        <div class="right">89% <i class="fas fa-battery-full"></i></div>
+      </div>
+
+      <div class="headingCenter">Notepad</div>
+      <hr class="solid">
+    </header>
+
+    <div id="page" class="page">
+      <p align="left">
+        <button class="navButton button1"><a style="text-decoration:none; color: white" href="mobile_new_note.html"><i class="fas fa-plus"></i> New Note</a></button>
+
+
+    </div>
+
+    <footer>
+      <div class="right">
+        <button class="navButton button2"><a style="text-decoration:none; color: white" href = "mobile.html">Home</a></button>
+      </div>
+    </footer>
+
+
+  </div>
+
+  <footer>
+    <div class="feature"></div>
+  </footer>
+
+</main>

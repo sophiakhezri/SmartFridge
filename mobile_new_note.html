@@ -1,0 +1,104 @@
+<head>
+  <script src="https://kit.fontawesome.com/67ffb6f852.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="mobilestyle.css">
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+if(localStorage) {
+  $(document).ready(function() {
+    $("#addButton").click(function() {
+      var notes = JSON.parse(localStorage.getItem("notes"));
+      var notesTitles = JSON.parse(localStorage.getItem("notes_titles"));
+      var notesDate = JSON.parse(localStorage.getItem("notes_date"));
+      var notesId = JSON.parse(localStorage.getItem("notes_id"));
+      var notesCounter = JSON.parse(localStorage.getItem("notes_counter"));
+      var today = new Date();
+
+      var newNote = $("#newMobileNote").val();
+      var newNoteTitle = $("#newMobileNoteTitle").val();
+      var date = (today.getMonth()+1)+"/"+today.getDate()+"/"+today.getFullYear();
+      var id = notesCounter;
+      
+      notes[notesCounter]=newNote;
+      notesTitles[notesCounter]=newNoteTitle;
+      notesDate[notesCounter]=date;
+      notesId[notesCounter]=id;
+      notesCounter += 1;
+
+      localStorage.setItem("notes", JSON.stringify(notes));
+      localStorage.setItem("notes_titles", JSON.stringify(notesTitles));
+      localStorage.setItem("notes_date", JSON.stringify(notesDate));
+      localStorage.setItem("notes_id", JSON.stringify(notesId));
+      localStorage.setItem("notes_counter", JSON.stringify(notesCounter));
+      window.location.replace("mobile_notepad.html");
+    });
+  })
+} else {
+  alert("Sorry, your browser do not support local storage.")
+}
+</script>
+</head>
+
+<style>
+
+  hr.solid {
+    border-top: 3px solid #282F44;
+  }
+  p {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    color: black;
+    font-size:12px;
+    display: inline;
+  }
+
+  .button1 {width: 100%;}
+</style>
+
+<main>
+
+  <header>
+    <div class="feature"></div>
+    <div class="feature"></div>
+  </header>
+
+  <div id="app">
+
+    <header>
+       <div class="system-bar">
+        <div class="left">Verizon 4G</div>
+        <div class="centre">12:34</div>
+        <div class="right">89% <i class="fas fa-battery-full"></i></div>
+      </div>
+
+      <div class="headingCenter">Notepad</div>
+      <hr class="solid">
+    </header>
+
+    <div class="page">
+      <p align="left">
+        <div>
+          <button class="navButton button1"><a style="text-decoration:none; color: white" href="mobile_notepad.html"><i class="fas fa-long-arrow-alt-left"></i> Back</a></button>
+        <button id="addButton" class="navButton button1"><a style="text-decoration:none; color: white"><i class="far fa-check-circle"></i> Done</a></button>
+        </div>
+        <br>
+        <div><textarea  id="newMobileNoteTitle" placeholder="Your Title Here"></textarea></div>
+        <br>
+        <div><textarea id="newMobileNote" placeholder="Your Text Here"></textarea></div>
+
+
+    </div>
+
+    <footer>
+      <div class="right">
+        <button class="navButton button2"><a style="text-decoration:none; color: white" href = "mobile.html">Home</a></button>
+      </div>
+    </footer>
+
+
+  </div>
+
+  <footer>
+    <div class="feature"></div>
+  </footer>
+
+</main>
