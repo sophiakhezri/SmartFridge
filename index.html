@@ -13,13 +13,10 @@ if(localStorage) {
       var notesId = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
       var notesCounter = 5;
 
-      var organizationMap = [["ground beef", "frozen"], ["chicken breast", "frozen"], ["spinach", "mid/lower part in freezer"], ["grapes", "mid/lower part in freezer"], ["bread", "cool and dry place"], ["banana", "cool and dry place"]];
-      var organizationSet = [["ground beef", "frozen"]];
-      var organizationCounter = 1;
-
-
-
-
+      var organizationMap = [["meat", "frozen"], ["vegetable", "cool and dry place"], ["fruit", "mid/lower part in freezer"]];
+      var organizationSet = [["ground beef", "frozen"], ["Banana", "cool and dry place"]];
+      var organizationCounter = 2;
+      
       localStorage.setItem("notes", JSON.stringify(notes));
       localStorage.setItem("notes_titles", JSON.stringify(notesTitles));
       localStorage.setItem("notes_date", JSON.stringify(notesDate));
