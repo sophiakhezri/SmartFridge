@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<script src="https://kit.fontawesome.com/67ffb6f852.js" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="../stylesheet.css">
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+if(localStorage) {
+  $(document).ready(function() {
+    var index = 0;
+    var notesTitles = JSON.parse(localStorage.getItem("notes_titles"));
+    var notesDate = JSON.parse(localStorage.getItem("notes_date"));
+    var notesId = JSON.parse(localStorage.getItem("notes_id"));
+    var notes = JSON.parse(localStorage.getItem("notes"));
+    var d = document.createElement("SPAN");
+    d.style = "float:right";
+    var dTextNode = document.createTextNode(notesDate[index]);
+    d.appendChild(dTextNode);
+
+
+    var text = document.getElementById("text");
+    var date = document.getElementById("date");
+    title = document.getElementById("title");
+    title.innerHTML = notesTitles[index];
+    title.appendChild(date);
+    document.getElementById("text").innerHTML = notes[index];
+    date.innerHTML = notesDate[index];
+  });
+} else {
+  alert("Sorry, your browser do not support local storage.")
+}
+</script>
+</head>
+
+<div id = "background"
+     style="background-color: #282F44;
+     height: 500px;
+     width:800px;
+     padding: 20px;
+     border: 6px;">
+
+     <H1 class="feature"> Notepad
+       <button style= "float:right" class="homeButton button2"><a style="text-decoration:none; font-weight:bold; color: #282F44" href = "index.html"><i class="fas fa-home"></i>   Home</a></button>
+       <div style= "float:right" class="time">11:32 am</div>
+     </H1>
+
+     <!-- <h3 id="title"> Untitle<span style="float:right;">Current</span></h3> -->
+     <h3 id="title">h <span id="date" style="float:right;">Aug 20, 2020</span></h3>
+     <p id="text">h</p>
+
+     <div align="center">
+       <button style= "float:left" class="addButton button2"><a style="text-decoration:none; font-weight:bold; color: #282F44" href = "../Notepad_Fridge.html"><i class="fas fa-long-arrow-alt-left"></i> Notes</a></button>
+     </div>
+</div>
+
+</html>
