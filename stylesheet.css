@@ -287,3 +287,9 @@ textarea::placeholder {
   font-size: 20px;
   line-height:2;
 }
+
+.notepadNote {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  text-decoration: none;
+  color: white;
+}
