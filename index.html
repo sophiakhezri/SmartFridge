@@ -2,6 +2,26 @@
 <html lang="en">
 <head><link rel="stylesheet" href="stylesheet.css">
 
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+if(localStorage) {
+  localStorage.clear();
+  $(document).ready(function() {
+      var notes = ["Hey Mom, I love you! I ate some of the left over in the refrigerator. I also walked the dog. I'm heading to the football practice, bye!", "This is Dad! Today is a good day! Hope everyone has a great day!", "Hey everyone, this is Jack! Just letting everyone know that tonight is the game night! I hope to see everyone there! I can't wait!", "Hey mom and dad, I'm going to study with Tom tonight! I won't be eating dinner at home! Love you! - Jack", "Hey mom and dad, tonight I'm going to the mall. I need some money to buy games please :)", "", "", "", "", ""];
+      var notesTitles = ["Hey mom! - Johnny", "Hope everyone has a great day!", "Game night tonight :)", "Busy tonight", "I'm going to shopping tonight!", "", "", "", "", ""];
+      var notesDate = ["01/10/2020", "08/20/2020", "09/10/2020", "10/11/2020", "11/08/2020", "", "", "", "", ""];
+      var notesId = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+      var notesCounter = 5;
+      localStorage.setItem("notes", JSON.stringify(notes));
+      localStorage.setItem("notes_titles", JSON.stringify(notesTitles));
+      localStorage.setItem("notes_date", JSON.stringify(notesDate));
+      localStorage.setItem("notes_id", JSON.stringify(notesId));
+      localStorage.setItem("notes_counter", JSON.stringify(notesCounter));
+  });
+} else {
+  alert("Sorry, your browser do not support local storage.")
+}
+</script>
 </head>
 
 <div id = "background"
