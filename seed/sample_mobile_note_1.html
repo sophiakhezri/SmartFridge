@@ -1,0 +1,93 @@
+<head>
+  <script src="https://kit.fontawesome.com/67ffb6f852.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../mobilestyle.css">
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+if(localStorage) {
+  $(document).ready(function() {
+    var index = 1;
+    var notesTitles = JSON.parse(localStorage.getItem("notes_titles"));
+    var notesDate = JSON.parse(localStorage.getItem("notes_date"));
+    var notesId = JSON.parse(localStorage.getItem("notes_id"));
+    var notes = JSON.parse(localStorage.getItem("notes"));
+    var d = document.createElement("SPAN");
+    d.style = "float:right";
+    var dTextNode = document.createTextNode(notesDate[index]);
+    d.appendChild(dTextNode);
+
+
+    var text = document.getElementById("text");
+    //var date = document.getElementById("date");
+    title = document.getElementById("title");
+    title.innerHTML = notesTitles[index];
+    //title.appendChild(date);
+    document.getElementById("text").innerHTML = notes[index];
+    //date.innerHTML = notesDate[index];
+  });
+} else {
+  alert("Sorry, your browser do not support local storage.")
+}
+</script>
+</head>
+
+<style>
+
+  hr.solid {
+    border-top: 3px solid #282F44;
+  }
+  p {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    color: black;
+    font-size:12px;
+    display: inline;
+  }
+
+  .button1 {width: 100%;}
+</style>
+
+<main>
+
+  <header>
+    <div class="feature"></div>
+    <div class="feature"></div>
+  </header>
+
+  <div id="app">
+
+    <header>
+       <div class="system-bar">
+        <div class="left">Verizon 4G</div>
+        <div class="centre">12:34</div>
+        <div class="right">89% <i class="fas fa-battery-full"></i></div>
+      </div>
+
+      <div class="headingCenter">Notepad</div>
+      <hr class="solid">
+    </header>
+
+    <div class="page">
+      <p align="left">
+        <button class="navButton button1"><a style="text-decoration:none; color: white" href="../mobile_notepad.html"><i class="fas fa-long-arrow-alt-left"></i> Back</a></button>
+      </p>
+
+      <h3 id="title">h</h3>
+     <p id="text">h</p>
+
+
+    </div>
+
+    <footer>
+      <div class="right">
+        <button class="navButton button2"><a style="text-decoration:none; color: white" href = "../mobile.html">Home</a></button>
+      </div>
+    </footer>
+
+
+  </div>
+
+  <footer>
+    <div class="feature"></div>
+  </footer>
+
+</main>
