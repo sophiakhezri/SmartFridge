@@ -5,6 +5,87 @@
 <script src="https://kit.fontawesome.com/67ffb6f852.js" crossorigin="anonymous"></script>
 
 <link rel="stylesheet" href="stylesheet.css">
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script type="text/javascript">
+  function deleteNotes() {
+    var notesCounter = JSON.parse(localStorage.getItem("notes_counter"));
+    notesCounter -= 1;
+    localStorage.setItem("notes_counter", JSON.stringify(notesCounter));
+    location.reload();
+  }
+</script>
+
+<script type="text/javascript">
+  function openNotes(btn) {
+    var index = btn.id;
+    var href = "seed/sample_note_" + index + ".html";
+    console.log(href);
+    window.location.replace(href);
+  }
+</script>
+
+<script type="text/javascript">
+if(localStorage) {
+  $(document).ready(function() {
+    var today = new Date();
+    document.getElementById("displayDate").innerHTML = today.toLocaleTimeString().replace(/([\d]+:[\d]{2})(:[\d]{2})(.*)/, "$1$3");
+    var notesTitles = JSON.parse(localStorage.getItem("notes_titles"));
+    var notesDate = JSON.parse(localStorage.getItem("notes_date"));
+    var notesId = JSON.parse(localStorage.getItem("notes_id"));
+    var notesCounter = Number(localStorage.getItem("notes_counter"));
+    var element = document.getElementById("notesList");
+    console.log(notesDate[0]);
+    for (i = 0; i < notesCounter; i++) {
+      var titleTag = document.createElement("a");
+      var dateTag = document.createElement("div");
+      var separator = document.createElement("hr");
+      var deleteIcon = document.createElement("i");
+      var openIcon = document.createElement("i");
+      var deleteButton = document.createElement("BUTTON");
+      var openButton = document.createElement("BUTTON");
+
+      var title = document.createTextNode(notesTitles[i]);
+      var date = document.createTextNode(notesDate[i]);
+      var deleteButtonText = document.createTextNode(" Delete");
+      var openButtonText = document.createTextNode(" Click to open");
+
+      dateTag.appendChild(date);
+      // dateTag.setAttribute("class", "notepadNote");
+      deleteIcon.setAttribute("class", "far fa-trash-alt");
+      openIcon.setAttribute("class", "fas fa-lock-open");
+      deleteButton.setAttribute("onclick", "deleteNotes(this)");
+      openButton.setAttribute("onclick", "openNotes(this)");
+      openButton.setAttribute("id", notesId[i]);
+      dateTag.setAttribute("class", "notepadDate");
+
+      deleteButton.appendChild(deleteIcon);
+      deleteButton.appendChild(deleteButtonText);
+      openButton.appendChild(openIcon);
+      openButton.appendChild(openButtonText);
+      titleTag.appendChild(title);
+      titleTag.href = "Notepad_Note_Template.html"
+      titleTag.setAttribute("class", "notepadNote");
+      deleteButton.style = "float:right";
+      openButton.style = "float:right";
+      dateTag.style = "float:right";
+
+
+      element.appendChild(titleTag);
+      element.appendChild(dateTag);
+      element.appendChild(deleteButton);
+      element.appendChild(openButton);
+      element.appendChild(dateTag);
+      element.appendChild(separator);
+    }
+
+  });
+} else {
+  alert("Sorry, your browser do not support local storage.")
+}
+</script>
+
 </head>
 
 <div id = "background"
@@ -16,24 +97,12 @@
 
      <H1 class="feature"> Notepad
        <button style= "float:right" class="homeButton button2"><a style="text-decoration:none; font-weight:bold; color: #282F44" href = "index.html"><i class="fas fa-home"></i>   Home</a></button>
-       <div style= "float:right" class="time">11:32 am</div>
+       <div id="displayDate" style= "float:right" class="time">11:32 am</div>
      </H1>
 
-     <a class="notepadNote" align="left" href="seed/sample_note_1.html">
-       Hey mom! - Johnn
-       <span style="float:right;"> Jan 10, 2020 <i id="noteDeleteIcon" class="fas fa-trash-alt"></i></span>
-     </a>
-     <hr>
-     <a class="notepadNote" align="left" href="seed/sample_note_2.html">
-       Hope everyone has a great day!
-       <span style="float:right;">Aug 20, 2020 <i id="noteDeleteIcon" class="fas fa-trash-alt"></i></span>
-     </a>
-     <hr>
-     <a class="notepadNote" align="left" href="seed/sample_note_3.html">
-       Game night tonight :)
-       <span style="float:right;">Nov 10, 2020 <i id="noteDeleteIcon" class="fas fa-trash-alt"></i></span>
-     </a>
-     <hr>
+
+     <div id="notesList">
+     </div>
      <div align="center">
        <button style= "float:left" class="addButton button2"><a style="text-decoration:none; font-weight:bold; color: #282F44" href = "Notepad_New_Page.html"><i class="fas fa-plus"></i>   New Note</a></button>
      </div>
