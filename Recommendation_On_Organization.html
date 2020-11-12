@@ -27,26 +27,31 @@ if(localStorage) {
       var buttonWrapper = document.createElement("div");
       var rowTag = document.createElement("p");
       var groceryTag = document.createElement("span");
+      var tipTag = document.createElement("span");
       var separator = document.createElement("hr");
       var deleteIcon = document.createElement("i");
       var deleteButton = document.createElement("BUTTON");
 
       var grocery = document.createTextNode(organizationSet[i][0]);
-      var rowText = document.createTextNode(" should be in: " + organizationSet[i][1] + "       ")
+      var rowText = document.createTextNode(" should be in: ");
+      var tip = document.createTextNode(organizationSet[i][1]);
       var deleteButtonText = document.createTextNode(" Delete");
 
       deleteIcon.setAttribute("class", "far fa-trash-alt");
       deleteButton.setAttribute("onclick", "deleteNotes()");
+      tipTag.style.fontWeight = "bold";
+      tipTag.style.color="green";
 
+      tipTag.appendChild(tip);
       groceryTag.appendChild(grocery);
       deleteButton.appendChild(deleteIcon);
       deleteButton.appendChild(deleteButtonText);
       groceryTag.setAttribute("class", "grocery");
-      // separator.setAttribute("width", "60%")
       deleteButton.style = "float:right";
       buttonWrapper.appendChild(deleteButton);
       rowTag.appendChild(groceryTag);
       rowTag.appendChild(rowText);
+      rowTag.appendChild(tipTag);
       rowTag.appendChild(deleteButton);
       rowTag.setAttribute("align", "center");
 
@@ -77,36 +82,6 @@ if(localStorage) {
 
 
      <div id="organizationList">
-       <!-- <p align="center">
-       <i class="fas fa-temperature-low"></i>
-       <span class="grocery">Ground beef</span> in Frozen <i class="fas fa-trash-alt"></i>
-     </p>
-     <hr width="60%">
-     <p align="center">
-       <i class="fas fa-temperature-low"></i>
-       <span class="grocery">Chicken breast</span> in Frozen <i class="fas fa-trash-alt"></i>
-     </p>
-     <hr width="60%">
-     <p align="center">
-       <i class="fas fa-temperature-low"></i>
-       <span class="grocery">Spinach</span> in mid/lower part in Freezer <i class="fas fa-trash-alt"></i>
-     </p>
-     <hr width="60%">
-     <p align="center">
-       <i class="fas fa-temperature-low"></i>
-       <span class="grocery">Grapes</span> in mid/lower part in Freezer <i class="fas fa-trash-alt"></i>
-     </p>
-     <hr width="60%">
-     <p align="center">
-       <i class="fas fa-fan"></i>
-       <span class="grocery">Bread</span> in cool and dry place <i class="fas fa-trash-alt"></i>
-     </p>
-     <hr width="60%">
-     <p align="center">
-       <i class="fas fa-fan"></i>
-       <span class="grocery">Banana</span> in cool and dry place <i class="fas fa-trash-alt"></i>
-     </p>
-     <hr width="60%"> -->
      </div>
 		 <div align="center">
        <button style= "float:center" class="addButton button2"><a style="text-decoration:none; font-weight:bold; color: #282F44" href = "organization_tips_new_tip.html"><i class="fas fa-plus"></i>   Add Tip</a></button>
