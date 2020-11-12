@@ -218,18 +218,15 @@ main>footer .feature {
   background-color: #282F44;
   border-radius: 8px;
   border: none;
-  padding: 33px 33px;
+  padding: 24px 3px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 13px;
-  margin: 10px 2px;
+  font-size: 12px;
+  margin: 2px 2px;
   cursor: pointer;
-  width: 103px;
-  height: 80px;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
-  align-items: center;
 }
 
 .navButton {
@@ -237,6 +234,21 @@ main>footer .feature {
   border-radius: 8px;
   border: none;
   padding: 3px 4px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 2px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.settingsButton {
+  background-color: grey;
+  border-radius: 8px;
+  border: none;
+  padding: 28px 3px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
