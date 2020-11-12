@@ -28,6 +28,9 @@
         var newGrocery = $("#newGrocery").val().toLowerCase();
         var newGroceryType = $("#newGroceryType").val().toLowerCase();
         var tip = getTip(newGroceryType);
+	if (newGrocery == "") {
+		newGrocery = "Empty grocery";
+	}
         organizationSet.push([newGrocery, tip])
         organizationCounter += 1;
         localStorage.setItem("organization_set", JSON.stringify(organizationSet));
