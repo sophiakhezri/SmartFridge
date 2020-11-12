@@ -13,7 +13,7 @@
           return organizationMap[i][1];
         }
       }
-      var result = "sorry, couldn't identify item. No tips at the moment";
+      var result = "false";
       return result;
     }
   </script>
@@ -28,14 +28,16 @@
         var newGrocery = $("#newGrocery").val().toLowerCase();
         var newGroceryType = $("#newGroceryType").val().toLowerCase();
         var tip = getTip(newGroceryType);
-	if (newGrocery == "") {
-		newGrocery = "Empty grocery";
-	}
-        organizationSet.push([newGrocery, tip])
-        organizationCounter += 1;
-        localStorage.setItem("organization_set", JSON.stringify(organizationSet));
-        localStorage.setItem("organization_counter", JSON.stringify(organizationCounter));
-        window.location.replace("Recommendation_On_Organization.html");
+      	if (newGrocery == "" || newGroceryType == "" || tip == "false") {
+      		alert("Unidentifiable grocery item. Enter other groceries.");
+          window.location.reload();
+      	} else {
+            organizationSet.push([newGrocery, tip])
+            organizationCounter += 1;
+            localStorage.setItem("organization_set", JSON.stringify(organizationSet));
+            localStorage.setItem("organization_counter", JSON.stringify(organizationCounter));
+            window.location.replace("Recommendation_On_Organization.html");
+        }
       });
     })
   } else {
