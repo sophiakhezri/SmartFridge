@@ -18,6 +18,14 @@ if(localStorage) {
       var newNoteTitle = $("#newMobileNoteTitle").val();
       var date = (today.getMonth()+1)+"/"+today.getDate()+"/"+today.getFullYear();
       var id = notesCounter;
+
+      if (newNote == "") {
+        newNote = "No content.";
+      }
+
+      if (newNoteTitle == "") {
+        newNoteTitle = "Untitled";
+      }
       
       notes[notesCounter]=newNote;
       notesTitles[notesCounter]=newNoteTitle;
