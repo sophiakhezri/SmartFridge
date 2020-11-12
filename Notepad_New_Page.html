@@ -27,6 +27,10 @@ if(localStorage) {
         newNoteTitle = "Untitle";
       }
       
+      if (newNote == "") {
+        newNote = "No content.";
+      }
+      
       notes[notesCounter]=newNote;
       notesTitles[notesCounter]=newNoteTitle;
       notesDate[notesCounter]=date;
