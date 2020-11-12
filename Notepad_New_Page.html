@@ -17,11 +17,15 @@ if(localStorage) {
       var notesId = JSON.parse(localStorage.getItem("notes_id"));
       var notesCounter = JSON.parse(localStorage.getItem("notes_counter"));
       var today = new Date();
-
+      
       var newNote = $("#newNote").val();
       var newNoteTitle = $("#newNoteTitle").val();
       var date = (today.getMonth()+1)+"/"+today.getDate()+"/"+today.getFullYear();
       var id = notesCounter;
+      
+      if (newNoteTitle == "") {
+        newNoteTitle = "Untitle";
+      }
       
       notes[notesCounter]=newNote;
       notesTitles[notesCounter]=newNoteTitle;
